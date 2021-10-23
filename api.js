@@ -5,7 +5,9 @@ const scanFood = async (barcode) => {
     "https://fr.openfoodfacts.org/api/v0/product/" + barcode + ".json"
   );
 
-  return response;
+  const json = await response.json();
+
+  return json;
 };
 
 export { scanFood };

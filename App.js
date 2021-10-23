@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React from "react";
-import MainStackNavigator from './src/Scanner/Scanner';
+import MainStackNavigator from './src/MainStackNavigator';
 
 const App = () => {
   return <MainStackNavigator />;

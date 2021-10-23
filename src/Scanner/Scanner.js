@@ -1,18 +1,16 @@
 import React, { useRef } from "react";
-import {
-  View,
-} from "react-native";
-import ScannerStyle from './ScannerStyle';
+import { View } from "react-native";
+import ScannerStyle from "./ScannerStyle";
 import { RNCamera } from "react-native-camera";
-import {scanFood} from '../../api';
 
-const Scanner = () => {
+const Scanner = ({ navigation }) => {
   const ref = useRef();
 
   const scanBarcode = async (barcode) => {
-    const data = await scanFood(barcode);
-    console.log(data);
-  }
+    navigation.push("Result", {
+      barcode: barcode.data.substring(1),
+    });
+  };
 
   return (
     <View style={ScannerStyle.container}>
@@ -31,7 +29,6 @@ const Scanner = () => {
       />
     </View>
   );
-  
 };
 
 export default Scanner;
