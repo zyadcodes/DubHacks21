@@ -130,7 +130,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.dubhacks"
+        applicationId "com.dubhacks21"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
