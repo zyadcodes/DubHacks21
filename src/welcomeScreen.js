@@ -3,13 +3,14 @@
 import colors from "../config/colors";
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
+import style from "./welcomeScreenStyle"
 
 export default function welcomeScreen(){
     return(
-        <View>
+        <View style={style.Body}>
             <Text>
                 Welcome to Dubhacks!
-                <TouchableOpacity>
+                <TouchableOpacity style = {style.Button}>
                     <Text>
                         Choose Dietary Preference
                     </Text>
