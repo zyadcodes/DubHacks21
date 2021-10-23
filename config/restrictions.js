@@ -83,7 +83,7 @@ const lifestyles = {
   vegan: [],
 };
 
-//list of all ingredients
+//list of all ingredients that are restricted
 const allRestrictions = [
   "Walnuts",
   "Lactose",
