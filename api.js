@@ -12,7 +12,7 @@ const scanFood = async (barcode) => {
   return json;
 };
 
-const createRestrictions = (userAllergies, userLifestyle) => {
+const createRestrictions = async (userAllergies, userLifestyle) => {
   let finalArr = userAllergies;
 
   for (let i = 0; i < userLifestyle.length; i++) {
@@ -20,6 +20,7 @@ const createRestrictions = (userAllergies, userLifestyle) => {
     let lifestyleVals = lifestyles[lifestyle];
     finalArr.push(lifestyleVals);
   }
+  await AsyncStorage.setItem("user", finalArr);
 
   return finalArr;
 };
