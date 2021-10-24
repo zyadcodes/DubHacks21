@@ -1,15 +1,18 @@
 // File contains the connection to the food API and returns the json.
 
-import { lifestyles, allRestrictions } from "config/restrictions.js";
+import { lifestyles } from "config/restrictions.js";
 
 const scanFood = async (barcode) => {
   const response = await fetch(
     "https://fr.openfoodfacts.org/api/v0/product/" + barcode + ".json"
   );
-  console.log(response);
+
+  const json = await response.json();
+
+  return json;
 };
 
-function finalArr(userAllergies, userLifestyle) {
+const createRestrictions = (userAllergies, userLifestyle) => {
   let finalArr = userAllergies;
 
   for (let i = 0; i < userLifestyle.length; i++) {
@@ -19,4 +22,6 @@ function finalArr(userAllergies, userLifestyle) {
   }
 
   return finalArr;
-}
+};
+
+export { createRestrictions, scanFood };
