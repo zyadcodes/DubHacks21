@@ -20,6 +20,7 @@ const createRestrictions = async (userAllergies, userLifestyle) => {
     let lifestyleVals = lifestyles[lifestyle];
     finalArr.push(lifestyleVals);
   }
+
   await AsyncStorage.setItem("user", finalArr);
 
   return finalArr;
