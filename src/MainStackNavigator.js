@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Result from "./Result/Result";
 import Scanner from "./Scanner/Scanner";
-import welcomeScreen from "./WelcomeScreen/welcomeScreen";
+import Restrictions from "./Restrictions/Restrictions";
 
 const Stack = createNativeStackNavigator();
 
@@ -11,12 +11,12 @@ const MyStack = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Welcome"
+        initialRouteName="Restrictions"
         screenOptions={{
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Welcome" component={welcomeScreen} />
+        <Stack.Screen name="Restrictions" component={Restrictions} />
         <Stack.Screen name="Scanner" component={Scanner} />
         <Stack.Screen name="Result" component={Result} />
       </Stack.Navigator>

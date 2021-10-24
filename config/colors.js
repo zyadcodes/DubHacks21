@@ -3,5 +3,7 @@ export default{
     blue: '#4DA1D1',
     darkBlue: '#4774A8',
     purple: '#5A5386',
-    darkPurple: '#524464'
+    darkPurple: '#524464',
+    white: "#FFFFFF",
+    black: "#000000"
 };
